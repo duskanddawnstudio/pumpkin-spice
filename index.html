@@ -425,7 +425,7 @@ app.addEventListener("click", e => {
   if (t.dataset.open) { ac(); return show(t.dataset.open); }
   if (t.dataset.hs) return runTimer(+t.dataset.hs);
   if (t.dataset.copy) { const p = DATA.players.find(x => x.key === t.dataset.copy);
-    return copyText(`You're invited to Death by Pumpkin Spice! You are ${p.name}, ${p.role}. Your private character booklet (don't share it): ${linkFor(p.key)}`, t); }
+    return copyText(`You're invited to Death by Pumpkin Spice! \u{1F383}\nYou are ${p.name}, ${p.role}.\nTap to open your private character booklet (don't share it):\n\n${linkFor(p.key)}`, t); }
   if (t.dataset.pround) { const k = location.hash.slice(1); const s = pstate(k); const n = +t.dataset.pround; if (!s.rounds.includes(n)) s.rounds.push(n); psave(k, s); paper(); return player(k); }
   if (t.dataset.psecret) { const k = location.hash.slice(1);
     if (t.dataset.psecret === "ask") return askSecret(k);
