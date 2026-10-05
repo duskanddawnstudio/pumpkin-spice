@@ -251,7 +251,8 @@ function home() {
   <div class="foot"><button class="link" id="reset">Start a new game</button></div>`;
   latte(document.getElementById("cup"));
 }
-function baseURL() { return location.href.split("#")[0]; }
+const PUBLIC_URL = "https://duskanddawnstudio.github.io/pumpkin-spice/";
+function baseURL() { return PUBLIC_URL; }
 function linkFor(k) { return baseURL() + "#" + k; }
 function copyText(txt, btn) {
   const done = () => { if (btn) { const o = btn.textContent; btn.textContent = "Copied"; setTimeout(() => btn.textContent = o, 1500); } };
